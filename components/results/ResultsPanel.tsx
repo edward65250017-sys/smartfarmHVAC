@@ -149,7 +149,7 @@ export default function ResultsPanel({ result, inputs, onReset }: Props) {
               <div className="font-bold text-cyan-700">{result.AH_in} g/m³</div>
             </div>
             <div>
-              <div className="text-gray-400 mb-0.5">HD</div>
+              <div className="text-gray-400 mb-0.5">습도부족분(HD)</div>
               <div className="font-bold text-cyan-700">{result.HD} g/m³</div>
             </div>
             <div>

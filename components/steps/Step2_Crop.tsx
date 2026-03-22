@@ -61,7 +61,7 @@ export default function Step2_Crop({ inputs, onChange, onNext, onBack }: Props) 
             <div className="bg-gray-50 rounded-lg p-3">
               <div className="text-xs text-gray-400 mb-1">설계 HD 범위</div>
               <div className="font-bold text-violet-600">{crop.hdRange}</div>
-              <div className="text-xs text-gray-400 mt-1">권장 습도 적자</div>
+              <div className="text-xs text-gray-400 mt-1">권장 습도부족분</div>
             </div>
           </div>
           <div className="grid grid-cols-3 gap-3">
