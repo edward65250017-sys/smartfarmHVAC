@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body {
+    background-color: #f8fafc;
+    color: #0f172a;
+    font-family: 'Inter', 'Noto Sans KR', system-ui, sans-serif;
+  }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #f1f5f9; }
+  ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+}
+
+@layer components {
+  .card {
+    @apply bg-white border border-gray-200 rounded-xl p-5 shadow-sm;
+  }
+  .input-field {
+    @apply w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-gray-900
+           text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent
+           placeholder-gray-400 transition;
+  }
+  .select-field {
+    @apply w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-gray-900
+           text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent
+           transition appearance-none cursor-pointer;
+  }
+  .label {
+    @apply block text-xs font-medium text-gray-500 mb-1 uppercase tracking-wide;
+  }
+  .btn-primary {
+    @apply bg-green-600 hover:bg-green-500 active:bg-green-700 text-white font-semibold
+           px-6 py-2.5 rounded-lg transition-all duration-150 text-sm;
+  }
+  .btn-secondary {
+    @apply bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium
+           px-5 py-2.5 rounded-lg transition-all duration-150 text-sm border border-gray-200;
+  }
+  .result-card {
+    @apply bg-gray-50 border border-gray-200 rounded-xl p-4 flex flex-col gap-1;
+  }
+  .result-value {
+    @apply text-2xl font-bold text-green-600 leading-none;
+  }
+  .result-unit {
+    @apply text-xs text-gray-400;
+  }
+  .result-label {
+    @apply text-xs font-medium text-gray-500 mt-1;
+  }
+  .badge-cooling {
+    @apply inline-flex items-center gap-1 bg-blue-50 text-blue-600 text-xs px-2 py-0.5 rounded-full border border-blue-200;
+  }
+  .badge-heating {
+    @apply inline-flex items-center gap-1 bg-orange-50 text-orange-600 text-xs px-2 py-0.5 rounded-full border border-orange-200;
+  }
+  .badge-dehum {
+    @apply inline-flex items-center gap-1 bg-cyan-50 text-cyan-600 text-xs px-2 py-0.5 rounded-full border border-cyan-200;
+  }
+}
