@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import PasswordGate from "@/components/PasswordGate";
 
 export const metadata: Metadata = {
   title: "SmartFarm HVAC Designer | 스마트팜 공조 설계 툴",
@@ -11,7 +10,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko">
       <body className="min-h-screen bg-slate-50 antialiased">
-        <PasswordGate>{children}</PasswordGate>
+        {children}
       </body>
     </html>
   );
