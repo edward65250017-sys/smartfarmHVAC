@@ -51,7 +51,7 @@ export default function Step4_Environment({ inputs, onChange, onCalculate, onBac
         <div className="grid grid-cols-2 gap-3 mb-3">
           {[
             { value: "rh", label: "상대습도 (RH %)", desc: "일반 습도계 기준" },
-            { value: "hd", label: "습도 적자 (HD g/m³)", desc: "VPD 기반 작물 제어" },
+            { value: "hd", label: "습도부족분 (HD g/m³)", desc: "VPD 기반 작물 제어" },
           ].map((opt) => (
             <button key={opt.value}
               onClick={() => onChange({ humidityMode: opt.value as "rh" | "hd" })}
