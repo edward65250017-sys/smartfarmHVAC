@@ -40,6 +40,7 @@ function Section({ title, children, badge }: { title: string; children: React.Re
 
 const REGION_LABEL: Record<string, string> = { se: "서울·경기", cc: "충청", hn: "호남", jj: "제주" };
 const FAC_LABEL: Record<string, string> = { greenhouse: "온실", vertical_farm: "수직농장" };
+const toStr = (v: unknown): string => String(v ?? "");
 
 export default function ResultsPanel({ result, inputs, onReset }: Props) {
   const resultsRef = useRef<HTMLDivElement>(null);
@@ -54,8 +55,8 @@ export default function ResultsPanel({ result, inputs, onReset }: Props) {
       const now = new Date();
       const dateStr = `${now.getFullYear()}년 ${now.getMonth() + 1}월 ${now.getDate()}일`;
       const cropLabel = crop ? crop.labelKo : inputs.crop;
-      const facType = FAC_LABEL[inputs.facilityType] ?? inputs.facilityType;
-      const regionLabel = REGION_LABEL[inputs.region] ?? inputs.region;
+      const facType = FAC_LABEL[toStr(inputs.facilityType)] ?? toStr(inputs.facilityType);
+      const regionLabel = REGION_LABEL[toStr(inputs.region)] ?? toStr(inputs.region);
 
       // Build a print wrapper (off-screen)
       const wrapper = document.createElement("div");
